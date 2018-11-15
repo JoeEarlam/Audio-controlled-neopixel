@@ -1556,7 +1556,7 @@ F 3 "" H 3825 4875 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L custom:TMAxxxxD U4
+L audio-controlled-neopixel-rescue:TMAxxxxD-custom U4
 U 1 1 5BF146EE
 P 3750 1100
 F 0 "U4" H 3750 1575 50  0000 C CNN
