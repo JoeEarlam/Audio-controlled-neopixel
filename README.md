@@ -4,7 +4,7 @@ Filters an incoming line level audio signal into three bandpassed frequency "bin
 
 Currently only one pattern is implemented on the strip, a "chasing lights" pattern where the most recent sample is set at pixel 0, and then shifted along the strip one position so that the new sample can be set at pixel 0 again.
 
-#Hardware Notes, in no particular order.
+# Hardware Notes, in no particular order.
 
 There are two options for power. +5V only using a Tracopower TMA0512D to generate the +/-12V voltages required for the analogue components, or external +/-12V and 5V. 5V only is preferred for simplicity, but the TMA0512D isn't a typical parts bin find (and is the single most expensive component on the board), so an external power header has been added for operation without.
 
