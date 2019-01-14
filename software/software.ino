@@ -3,14 +3,27 @@
   #include <avr/power.h>
 #endif
 
-const byte pin = 2;					//Neopixel pin
-const byte numpixels = 152;			//Number of pixels in strip
+
+/////////////////////////Number of pixels in your strip
+const byte numpixels = 152; 
+
+const byte pin = 2;           //Neopixel pin
+const byte button = 3;        //button pin
+
+boolean buttonState;          //current state of button
+boolean lastButtonState;      //previous state of button
+
+byte red;                     //red pixel value
+byte green;                   //green...
+byte blue;                    //etc
+byte programme;               //current programme type (0 = block, 1 = chasing lights)
+
+byte pixelarray[numpixels][3];    //2D Array to hold status of every pixel
 
 Adafruit_NeoPixel pixels = Adafruit_NeoPixel(numpixels, pin, NEO_RGB + NEO_KHZ800);		//set up strip
 
-byte pixelarray[numpixels][3];		//Array to hold status of every pixel
 
-//Table for gamma correction
+//Table for gamma correction, this adjusts brightness values for more visual contrast
 const uint8_t PROGMEM gamma8[] = {
     0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
     0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1,  1,  1,  1,
@@ -30,33 +43,71 @@ const uint8_t PROGMEM gamma8[] = {
   215,218,220,223,225,228,231,233,236,239,241,244,247,249,252,255 };
 
 void setup() {
+  pinMode(button,INPUT);
   pixels.begin(); // This initializes the NeoPixel library.
 }
 
 void loop() 
 {
 
-  //Sets first pixel to current RGB values
-  pixelarray[0][0] = pgm_read_byte(&gamma8[analogRead(0)/4]);		//Red is A0/4 (0-255 output, 0-1023 input)
-  pixelarray[0][1] = pgm_read_byte(&gamma8[analogRead(1)/4]);		//Green is A1/4
-  pixelarray[0][2] = pgm_read_byte(&gamma8[analogRead(2)/4]);		//Blue is A2/4
-  
- //Goes through our bigass array and assigns values to every pixel as per array
- for(byte i=0;i<numpixels;i++)
+  //change programme type on button press (rising edge trigger only)
+  buttonState = digitalRead(button);
+  if (buttonState != lastButtonState) 
   {
-    pixels.setPixelColor(i, pixels.Color(pixelarray[i][0],pixelarray[i][1],pixelarray[i][2]));
-  }
-  
-  pixels.show(); // This sends the updated pixel color to the hardware.
-
-  //shifts values in array up by one, leaving space for new values at start of strip
-  for(byte i=0;i<3;i++)
-  {
-    for(byte j = numpixels-1; j>0; j--)
+    if (buttonState == HIGH) 
     {
-      pixelarray[j][i] = pixelarray[j-1][i];
+      programme++;
+      if(programme > 1)
+      {
+        programme = 0;
+      }
     }
+    delay(50);
   }
+  lastButtonState = buttonState;
+
+  //Saves current RGB values to memory for use by routines
+  red = pgm_read_byte(&gamma8[analogRead(0)/4]);    //Red is A0/4 (0-255 output, 0-1023 input)
+  green = pgm_read_byte(&gamma8[analogRead(1)/4]);   //Green is A1/4
+  blue = pgm_read_byte(&gamma8[analogRead(2)/4]);   //Blue is A2/4
+
+  if(programme == 0) //block update
+  {
+    
+    //Assigns every pixel value to our RGB values
+    for(byte i=0;i<numpixels;i++)
+    {
+      pixels.setPixelColor(i, pixels.Color(red,green,blue));
+    }
+
+    pixels.show(); // This sends the updated pixel color to the hardware.
+  }
+
+  if(programme == 1) //chasing lights
+  {
+    //First pixel in the chain is set to our latest colours
+    pixelarray[0][0] = red;
+    pixelarray[0][1] = green;
+    pixelarray[0][2] = blue;
+    
+   //Goes through our bigass array and assigns values to every pixel as per the contents of the array
+   for(byte i=0;i<numpixels;i++)
+    {
+      pixels.setPixelColor(i, pixels.Color(pixelarray[i][0],pixelarray[i][1],pixelarray[i][2]));
+    }
+    
+    pixels.show(); // This sends the updated pixel color to the hardware.
   
-  delay(10);	//Delay some time, otherwise things happen too fast to see
+    //shifts values in array up by one, leaving space for new values at start of strip. This gives our "chasing" effect
+    for(byte i=0;i<3;i++)
+    {
+      for(byte j = numpixels-1; j>0; j--)
+      {
+        pixelarray[j][i] = pixelarray[j-1][i];
+      }
+    }
+    
+    delay(10);  //Delay some time, otherwise things happen too fast to see
+  }
+
 }
