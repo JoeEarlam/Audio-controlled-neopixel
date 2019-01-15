@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:audio-controlled-neopixel-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
@@ -671,7 +670,7 @@ Wire Wire Line
 	8575 1775 8525 1775
 Wire Wire Line
 	8525 1775 8525 1725
-Text Label 5200 4550 2    50   ~ 0
+Text Label 4950 4550 2    50   ~ 0
 Buf_input
 $Comp
 L Device:R_Small R1
@@ -690,7 +689,7 @@ Connection ~ 5575 4550
 Wire Wire Line
 	5575 4550 5925 4550
 Wire Wire Line
-	5575 4850 5575 4800
+	5575 4850 5575 4825
 $Comp
 L Device:C_Small C3
 U 1 1 5C02A13C
@@ -971,7 +970,7 @@ F 3 "~" H 5375 4550 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	5200 4550 5275 4550
+	5200 4550 5250 4550
 Wire Wire Line
 	2525 3375 2525 3500
 Wire Wire Line
@@ -1273,7 +1272,7 @@ F 3 "" H 5575 4850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L custom:TMAxxxxD U4
+L audio-controlled-neopixel-rescue:TMAxxxxD-custom U4
 U 1 1 5BF146EE
 P 3150 2175
 F 0 "U4" H 2750 2625 50  0000 L CNN
@@ -1743,4 +1742,42 @@ F 3 "" H 1125 7350 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	1625 7125 1625 7325
+$Comp
+L Device:R_Small R19
+U 1 1 5C3F66FF
+P 5100 4550
+F 0 "R19" H 5175 4575 50  0000 L CNN
+F 1 "10K" H 5175 4500 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 5100 4550 50  0001 C CNN
+F 3 "~" H 5100 4550 50  0001 C CNN
+	1    5100 4550
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Small R20
+U 1 1 5C3F6822
+P 5250 4700
+F 0 "R20" H 5325 4725 50  0000 L CNN
+F 1 "100K" H 5325 4650 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 5250 4700 50  0001 C CNN
+F 3 "~" H 5250 4700 50  0001 C CNN
+	1    5250 4700
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5250 4600 5250 4550
+Connection ~ 5250 4550
+Wire Wire Line
+	5250 4550 5275 4550
+Wire Wire Line
+	5250 4800 5250 4825
+Wire Wire Line
+	5250 4825 5575 4825
+Connection ~ 5575 4825
+Wire Wire Line
+	5575 4825 5575 4800
+Wire Wire Line
+	4950 4550 5000 4550
+Text Notes 3325 4975 0    50   ~ 0
+R19/20 define attenuation for peak level calibration
 $EndSCHEMATC
