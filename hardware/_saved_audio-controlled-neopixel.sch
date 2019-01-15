@@ -815,29 +815,10 @@ Wire Wire Line
 Connection ~ 3200 3900
 Wire Wire Line
 	7375 650  7375 700 
-Text Label 1025 850  0    50   ~ 0
+Text Label 1050 2025 0    50   ~ 0
 Input_L
-Text Label 1025 950  0    50   ~ 0
+Text Label 1050 1925 0    50   ~ 0
 Input_R
-$Comp
-L Connector:Conn_01x06_Female J1
-U 1 1 5BDF4212
-P 750 950
-F 0 "J1" H 644 425 50  0000 C CNN
-F 1 "Phoenix MPT" H 644 516 50  0000 C CNN
-F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MPT-0,5-6-2.54_1x06_P2.54mm_Horizontal" H 750 950 50  0001 C CNN
-F 3 "~" H 750 950 50  0001 C CNN
-	1    750  950 
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	1025 850  975  850 
-Wire Wire Line
-	1025 950  1000 950 
-Wire Wire Line
-	1000 1250 950  1250
-Wire Wire Line
-	950  1050 1150 1050
 Wire Wire Line
 	3250 1000 3175 1000
 Wire Wire Line
@@ -927,88 +908,88 @@ F 3 "http://www.nxp.com/documents/data_sheet/BAT85.pdf" H 7375 3200 50  0001 C C
 	0    1    1    0   
 $EndComp
 $Comp
-L Connector:Conn_01x03_Female J3
+L Connector:Conn_01x03_Female J4
 U 1 1 5BF7454B
-P 2250 2200
-F 0 "J3" H 2143 1875 50  0000 C CNN
-F 1 "KF2EDGK" H 2143 1966 50  0000 C CNN
-F 2 "Connector_Phoenix_MSTB:PhoenixContact_MSTBA_2,5_3-G-5,08_1x03_P5.08mm_Horizontal" H 2250 2200 50  0001 C CNN
-F 3 "~" H 2250 2200 50  0001 C CNN
-	1    2250 2200
+P 4250 2125
+F 0 "J4" H 4143 1800 50  0000 C CNN
+F 1 "KF2EDGK" H 4143 1891 50  0000 C CNN
+F 2 "Connector_Phoenix_MSTB:PhoenixContact_MSTBA_2,5_3-G-5,08_1x03_P5.08mm_Horizontal" H 4250 2125 50  0001 C CNN
+F 3 "~" H 4250 2125 50  0001 C CNN
+	1    4250 2125
 	1    0    0    -1  
 $EndComp
-Text Label 1975 2200 2    50   ~ 0
+Text Label 3975 2125 2    50   ~ 0
 Neopixel
 Wire Wire Line
 	6550 4775 6675 4775
 Wire Wire Line
-	1975 2200 2050 2200
+	3975 2125 4050 2125
 $Comp
 L Device:CP_Small C19
 U 1 1 5C00ED30
-P 1600 2200
-F 0 "C19" H 1450 2250 50  0000 L CNN
-F 1 "330u 35V" H 1250 2125 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_D10.0mm_P5.00mm" H 1600 2200 50  0001 C CNN
-F 3 "~" H 1600 2200 50  0001 C CNN
-	1    1600 2200
+P 3600 2125
+F 0 "C19" H 3450 2175 50  0000 L CNN
+F 1 "330u 35V" H 3250 2050 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D10.0mm_P5.00mm" H 3600 2125 50  0001 C CNN
+F 3 "~" H 3600 2125 50  0001 C CNN
+	1    3600 2125
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:Conn_01x02_Female J4
+L Connector:Conn_01x02_Female J5
 U 1 1 5C04F848
-P 2675 1000
-F 0 "J4" H 2568 675 50  0000 C CNN
-F 1 "KF2EDGK" H 2568 766 50  0000 C CNN
-F 2 "Connector_Phoenix_MSTB:PhoenixContact_MSTBA_2,5_2-G_1x02_P5.00mm_Horizontal" H 2675 1000 50  0001 C CNN
-F 3 "~" H 2675 1000 50  0001 C CNN
-	1    2675 1000
+P 2850 1025
+F 0 "J5" H 2743 700 50  0000 C CNN
+F 1 "KF2EDGK" H 2743 791 50  0000 C CNN
+F 2 "Connector_Phoenix_MSTB:PhoenixContact_MSTBA_2,5_2-G_1x02_P5.00mm_Horizontal" H 2850 1025 50  0001 C CNN
+F 3 "~" H 2850 1025 50  0001 C CNN
+	1    2850 1025
 	1    0    0    1   
 $EndComp
 Wire Wire Line
-	1675 900  1675 800 
+	1850 925  1850 825 
 Wire Wire Line
-	1925 1225 1925 1250
+	2100 1250 2100 1275
 $Comp
 L Device:Fuse F1
 U 1 1 5C0A076A
-P 2275 900
-F 0 "F1" V 2472 900 50  0000 C CNN
-F 1 "176-9047" V 2381 900 50  0000 C CNN
-F 2 "Footprints:5x20_holder" V 2205 900 50  0001 C CNN
-F 3 "~" H 2275 900 50  0001 C CNN
-	1    2275 900 
+P 2450 925
+F 0 "F1" V 2647 925 50  0000 C CNN
+F 1 "176-9047" V 2556 925 50  0000 C CNN
+F 2 "Footprints:5x20_holder" V 2380 925 50  0001 C CNN
+F 3 "~" H 2450 925 50  0001 C CNN
+	1    2450 925 
 	0    -1   -1   0   
 $EndComp
 $Comp
 L Diode:BAT85 D10
 U 1 1 5C0D090A
-P 1925 1075
-F 0 "D10" V 1879 1154 50  0000 L CNN
-F 1 "1N5819" V 1970 1154 50  0000 L CNN
-F 2 "Diode_SMD:D_SOD-123" H 1925 900 50  0001 C CNN
-F 3 "http://www.nxp.com/documents/data_sheet/BAT85.pdf" H 1925 1075 50  0001 C CNN
-	1    1925 1075
+P 2100 1100
+F 0 "D10" V 2054 1179 50  0000 L CNN
+F 1 "1N5819" V 2145 1179 50  0000 L CNN
+F 2 "Diode_SMD:D_SOD-123" H 2100 925 50  0001 C CNN
+F 3 "http://www.nxp.com/documents/data_sheet/BAT85.pdf" H 2100 1100 50  0001 C CNN
+	1    2100 1100
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	2475 900  2425 900 
+	2650 925  2600 925 
 Wire Wire Line
-	1675 900  1925 900 
+	1850 925  2100 925 
 Wire Wire Line
-	1925 925  1925 900 
-Connection ~ 1925 900 
+	2100 950  2100 925 
+Connection ~ 2100 925 
 Wire Wire Line
-	1925 900  2125 900 
+	2100 925  2300 925 
 Wire Wire Line
-	1925 1250 2200 1250
+	2100 1275 2375 1275
 Wire Wire Line
-	2200 1250 2200 1000
+	2375 1275 2375 1025
 Wire Wire Line
-	2200 1000 2475 1000
-Connection ~ 1925 1250
+	2375 1025 2650 1025
+Connection ~ 2100 1275
 Wire Wire Line
-	1925 1250 1925 1275
+	2100 1275 2100 1300
 $Comp
 L Device:C_Small C20
 U 1 1 5C1986B5
@@ -1039,32 +1020,32 @@ Wire Wire Line
 $Comp
 L power:+5V #PWR0101
 U 1 1 5C062921
-P 2025 2050
-F 0 "#PWR0101" H 2025 1900 50  0001 C CNN
-F 1 "+5V" H 2040 2223 50  0000 C CNN
-F 2 "" H 2025 2050 50  0001 C CNN
-F 3 "" H 2025 2050 50  0001 C CNN
-	1    2025 2050
+P 4025 1975
+F 0 "#PWR0101" H 4025 1825 50  0001 C CNN
+F 1 "+5V" H 4040 2148 50  0000 C CNN
+F 2 "" H 4025 1975 50  0001 C CNN
+F 3 "" H 4025 1975 50  0001 C CNN
+	1    4025 1975
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1600 2100 2025 2100
+	3600 2025 4025 2025
 Wire Wire Line
-	2025 2050 2025 2100
-Connection ~ 2025 2100
+	4025 1975 4025 2025
+Connection ~ 4025 2025
 Wire Wire Line
-	2025 2100 2050 2100
+	4025 2025 4050 2025
 Wire Wire Line
-	1600 2300 2025 2300
+	3600 2225 4025 2225
 $Comp
 L power:GND #PWR0102
 U 1 1 5C0B1305
-P 2025 2350
-F 0 "#PWR0102" H 2025 2100 50  0001 C CNN
-F 1 "GND" H 2030 2177 50  0000 C CNN
-F 2 "" H 2025 2350 50  0001 C CNN
-F 3 "" H 2025 2350 50  0001 C CNN
-	1    2025 2350
+P 4025 2275
+F 0 "#PWR0102" H 4025 2025 50  0001 C CNN
+F 1 "GND" H 4030 2102 50  0000 C CNN
+F 2 "" H 4025 2275 50  0001 C CNN
+F 3 "" H 4025 2275 50  0001 C CNN
+	1    4025 2275
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1160,12 +1141,12 @@ $EndComp
 $Comp
 L power:GND #PWR0113
 U 1 1 5C1314D7
-P 1925 1275
-F 0 "#PWR0113" H 1925 1025 50  0001 C CNN
-F 1 "GND" H 1930 1102 50  0000 C CNN
-F 2 "" H 1925 1275 50  0001 C CNN
-F 3 "" H 1925 1275 50  0001 C CNN
-	1    1925 1275
+P 2100 1300
+F 0 "#PWR0113" H 2100 1050 50  0001 C CNN
+F 1 "GND" H 2105 1127 50  0000 C CNN
+F 2 "" H 2100 1300 50  0001 C CNN
+F 3 "" H 2100 1300 50  0001 C CNN
+	1    2100 1300
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1303,23 +1284,12 @@ $EndComp
 $Comp
 L power:+5V #PWR0126
 U 1 1 5C157286
-P 1675 800
-F 0 "#PWR0126" H 1675 650 50  0001 C CNN
-F 1 "+5V" H 1690 973 50  0000 C CNN
-F 2 "" H 1675 800 50  0001 C CNN
-F 3 "" H 1675 800 50  0001 C CNN
-	1    1675 800 
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0127
-U 1 1 5C167007
-P 1150 1400
-F 0 "#PWR0127" H 1150 1150 50  0001 C CNN
-F 1 "GND" H 1155 1227 50  0000 C CNN
-F 2 "" H 1150 1400 50  0001 C CNN
-F 3 "" H 1150 1400 50  0001 C CNN
-	1    1150 1400
+P 1850 825
+F 0 "#PWR0126" H 1850 675 50  0001 C CNN
+F 1 "+5V" H 1865 998 50  0000 C CNN
+F 2 "" H 1850 825 50  0001 C CNN
+F 3 "" H 1850 825 50  0001 C CNN
+	1    1850 825 
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1337,10 +1307,10 @@ $Comp
 L custom:TMAxxxxD U4
 U 1 1 5BF146EE
 P 3750 1100
-F 0 "U4" H 3750 1575 50  0000 C CNN
-F 1 "TMA0512D" H 3750 1484 50  0000 C CNN
+F 0 "U4" H 3350 1550 50  0000 L CNN
+F 1 "TMA0512D" H 3350 1450 50  0000 L CNN
 F 2 "Footprints:TMAxxxxD" H 3850 1000 50  0001 C CIN
-F 3 "www.tracopower.com/products/ten20win.pdf" H 3750 1100 50  0001 C CNN
+F 3 "" H 3750 1100 50  0001 C CNN
 	1    3750 1100
 	1    0    0    -1  
 $EndComp
@@ -1441,33 +1411,16 @@ F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 1400 7125 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2025 2350 2025 2300
-Connection ~ 2025 2300
+	4025 2275 4025 2225
+Connection ~ 4025 2225
 Wire Wire Line
-	2025 2300 2050 2300
+	4025 2225 4050 2225
 Wire Wire Line
 	9400 3650 9400 3175
 Wire Wire Line
 	9400 3175 9600 3175
 Wire Wire Line
 	9225 3650 9400 3650
-Wire Wire Line
-	1150 1050 1150 1400
-$Comp
-L power:GND #PWR0129
-U 1 1 5C1AE4EE
-P 1375 775
-F 0 "#PWR0129" H 1375 525 50  0001 C CNN
-F 1 "GND" H 1380 602 50  0000 C CNN
-F 2 "" H 1375 775 50  0001 C CNN
-F 3 "" H 1375 775 50  0001 C CNN
-	1    1375 775 
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1375 775  1375 750 
-Wire Wire Line
-	1375 750  950  750 
 $Comp
 L Device:C_Small C13
 U 1 1 5C3EC28B
@@ -1611,72 +1564,60 @@ Wire Wire Line
 	1750 3925 1875 3925
 Wire Wire Line
 	1750 3275 2000 3275
-Wire Wire Line
-	975  850  975  1150
-Connection ~ 975  850 
-Wire Wire Line
-	975  850  950  850 
-Wire Wire Line
-	975  1150 950  1150
-Wire Wire Line
-	1000 950  1000 1250
-Connection ~ 1000 950 
-Wire Wire Line
-	1000 950  950  950 
 $Comp
-L Connector:Conn_01x03_Female J2
+L Connector:Conn_01x03_Female J3
 U 1 1 5C48F6A4
-P 1025 2275
-F 0 "J2" H 918 1950 50  0000 C CNN
-F 1 "KF2EDGK" H 918 2041 50  0000 C CNN
-F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MPT-0,5-3-2.54_1x03_P2.54mm_Horizontal" H 1025 2275 50  0001 C CNN
-F 3 "~" H 1025 2275 50  0001 C CNN
-	1    1025 2275
+P 3025 2200
+F 0 "J3" H 2918 1875 50  0000 C CNN
+F 1 "KF2EDGK" H 2918 1966 50  0000 C CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MPT-0,5-3-2.54_1x03_P2.54mm_Horizontal" H 3025 2200 50  0001 C CNN
+F 3 "~" H 3025 2200 50  0001 C CNN
+	1    3025 2200
 	1    0    0    1   
 $EndComp
 $Comp
 L power:+12V #PWR0133
 U 1 1 5C490294
-P 675 2100
-F 0 "#PWR0133" H 675 1950 50  0001 C CNN
-F 1 "+12V" H 690 2273 50  0000 C CNN
-F 2 "" H 675 2100 50  0001 C CNN
-F 3 "" H 675 2100 50  0001 C CNN
-	1    675  2100
+P 2675 2025
+F 0 "#PWR0133" H 2675 1875 50  0001 C CNN
+F 1 "+12V" H 2690 2198 50  0000 C CNN
+F 2 "" H 2675 2025 50  0001 C CNN
+F 3 "" H 2675 2025 50  0001 C CNN
+	1    2675 2025
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:-12V #PWR0134
 U 1 1 5C49032B
-P 675 2275
-F 0 "#PWR0134" H 675 2375 50  0001 C CNN
-F 1 "-12V" H 690 2448 50  0000 C CNN
-F 2 "" H 675 2275 50  0001 C CNN
-F 3 "" H 675 2275 50  0001 C CNN
-	1    675  2275
+P 2675 2200
+F 0 "#PWR0134" H 2675 2300 50  0001 C CNN
+F 1 "-12V" H 2690 2373 50  0000 C CNN
+F 2 "" H 2675 2200 50  0001 C CNN
+F 3 "" H 2675 2200 50  0001 C CNN
+	1    2675 2200
 	0    -1   -1   0   
 $EndComp
 $Comp
 L power:GND #PWR0135
 U 1 1 5C4903C2
-P 675 2425
-F 0 "#PWR0135" H 675 2175 50  0001 C CNN
-F 1 "GND" H 680 2252 50  0000 C CNN
-F 2 "" H 675 2425 50  0001 C CNN
-F 3 "" H 675 2425 50  0001 C CNN
-	1    675  2425
+P 2675 2350
+F 0 "#PWR0135" H 2675 2100 50  0001 C CNN
+F 1 "GND" H 2680 2177 50  0000 C CNN
+F 2 "" H 2675 2350 50  0001 C CNN
+F 3 "" H 2675 2350 50  0001 C CNN
+	1    2675 2350
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	825  2175 675  2175
+	2825 2100 2675 2100
 Wire Wire Line
-	675  2175 675  2100
+	2675 2100 2675 2025
 Wire Wire Line
-	675  2275 825  2275
+	2675 2200 2825 2200
 Wire Wire Line
-	825  2375 675  2375
+	2825 2300 2675 2300
 Wire Wire Line
-	675  2375 675  2425
+	2675 2300 2675 2350
 $Comp
 L Diode:1N4148 D4
 U 1 1 5BC9CB98
@@ -1722,10 +1663,10 @@ F 3 "http://www.nxp.com/documents/data_sheet/1N4148_1N4448.pdf" H 5075 4675 50  
 	-1   0    0    1   
 $EndComp
 $Comp
-L Connector:Conn_01x01_Female J7
+L Connector:Conn_01x01_Female J8
 U 1 1 5C6038BE
 P 6125 7375
-F 0 "J7" H 6019 7150 50  0000 C CNN
+F 0 "J8" H 6019 7150 50  0000 C CNN
 F 1 "Conn_01x01_Female" H 6019 7241 50  0000 C CNN
 F 2 "MountingHole:MountingHole_3.2mm_M3" H 6125 7375 50  0001 C CNN
 F 3 "~" H 6125 7375 50  0001 C CNN
@@ -1733,36 +1674,36 @@ F 3 "~" H 6125 7375 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Connector:Conn_01x01_Female J8
+L Connector:Conn_01x01_Female J9
 U 1 1 5C6038C5
-P 6125 7525
-F 0 "J8" H 6019 7300 50  0000 C CNN
-F 1 "Conn_01x01_Female" H 6019 7391 50  0000 C CNN
-F 2 "MountingHole:MountingHole_3.2mm_M3" H 6125 7525 50  0001 C CNN
-F 3 "~" H 6125 7525 50  0001 C CNN
-	1    6125 7525
+P 6125 7600
+F 0 "J9" H 6019 7375 50  0000 C CNN
+F 1 "Conn_01x01_Female" H 6019 7466 50  0000 C CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 6125 7600 50  0001 C CNN
+F 3 "~" H 6125 7600 50  0001 C CNN
+	1    6125 7600
 	-1   0    0    1   
 $EndComp
 $Comp
-L Connector:Conn_01x01_Female J5
+L Connector:Conn_01x01_Female J7
 U 1 1 5C6038CC
-P 6125 7075
-F 0 "J5" H 6019 6850 50  0000 C CNN
-F 1 "Conn_01x01_Female" H 6019 6941 50  0000 C CNN
-F 2 "MountingHole:MountingHole_3.2mm_M3" H 6125 7075 50  0001 C CNN
-F 3 "~" H 6125 7075 50  0001 C CNN
-	1    6125 7075
+P 6125 7175
+F 0 "J7" H 6019 6950 50  0000 C CNN
+F 1 "Conn_01x01_Female" H 6019 7041 50  0000 C CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 6125 7175 50  0001 C CNN
+F 3 "~" H 6125 7175 50  0001 C CNN
+	1    6125 7175
 	-1   0    0    1   
 $EndComp
 $Comp
 L Connector:Conn_01x01_Female J6
 U 1 1 5C6038D3
-P 6125 7225
-F 0 "J6" H 6019 7000 50  0000 C CNN
-F 1 "Conn_01x01_Female" H 6019 7091 50  0000 C CNN
-F 2 "MountingHole:MountingHole_3.2mm_M3" H 6125 7225 50  0001 C CNN
-F 3 "~" H 6125 7225 50  0001 C CNN
-	1    6125 7225
+P 6125 7000
+F 0 "J6" H 6019 6775 50  0000 C CNN
+F 1 "Conn_01x01_Female" H 6019 6866 50  0000 C CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 6125 7000 50  0001 C CNN
+F 3 "~" H 6125 7000 50  0001 C CNN
+	1    6125 7000
 	-1   0    0    1   
 $EndComp
 $Comp
@@ -1787,4 +1728,48 @@ F 3 "~" H 2100 3375 50  0001 C CNN
 	1    2100 3375
 	0    -1   -1   0   
 $EndComp
+Wire Wire Line
+	1025 2025 1450 2025
+Wire Wire Line
+	1025 1925 1450 1925
+$Comp
+L power:GND #PWR0127
+U 1 1 5C463B71
+P 1400 2325
+F 0 "#PWR0127" H 1400 2075 50  0001 C CNN
+F 1 "GND" H 1405 2152 50  0000 C CNN
+F 2 "" H 1400 2325 50  0001 C CNN
+F 3 "" H 1400 2325 50  0001 C CNN
+	1    1400 2325
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1400 2325 1400 2225
+$Comp
+L Connector:AudioJack3_Ground J1
+U 1 1 5C505DD1
+P 825 1925
+F 0 "J1" H 801 2267 50  0000 C CNN
+F 1 "AudioJack3_Ground" H 801 2176 50  0000 C CNN
+F 2 "Footprints:Jack_3.5mm_PJ320E_Horizontal" H 825 1925 50  0001 C CNN
+F 3 "~" H 825 1925 50  0001 C CNN
+	1    825  1925
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	625  2225 1400 2225
+Connection ~ 1400 2225
+$Comp
+L Connector:AudioJack3_Ground J2
+U 1 1 5C561508
+P 1650 1925
+F 0 "J2" H 1362 1903 50  0000 R CNN
+F 1 "AudioJack3_Ground" H 1362 1812 50  0000 R CNN
+F 2 "Footprints:Jack_3.5mm_PJ320E_Horizontal" H 1650 1925 50  0001 C CNN
+F 3 "~" H 1650 1925 50  0001 C CNN
+	1    1650 1925
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	1850 2225 1400 2225
 $EndSCHEMATC
