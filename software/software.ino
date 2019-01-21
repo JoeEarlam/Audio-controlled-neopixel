@@ -57,7 +57,7 @@ void loop()
     if (buttonState == HIGH) 
     {
       programme++;
-      if(programme > 1)
+      if(programme > 3) //Set highest programme number here
       {
         programme = 0;
       }
@@ -75,7 +75,7 @@ void loop()
   {
     
     //Assigns every pixel value to our RGB values
-    for(byte i=0;i<numpixels;i++)
+    for(byte i=0; i<numpixels; i++)
     {
       pixels.setPixelColor(i, pixels.Color(red,green,blue));
     }
@@ -109,5 +109,72 @@ void loop()
     
     delay(10);  //Delay some time, otherwise things happen too fast to see
   }
+  
+  if(programme == 2) //dimming chasing lights
+  {
+    //First pixel in the chain is set to our latest colours
+    pixelarray[0][0] = red;
+    pixelarray[0][1] = green;
+    pixelarray[0][2] = blue;
+    
+   //Goes through our bigass array and assigns values to every pixel as per the contents of the array
+   for(byte i=0;i<numpixels;i++)
+    {
+      pixels.setPixelColor(i, pixels.Color(pixelarray[i][0],pixelarray[i][1],pixelarray[i][2]));
+    }
+    
+    pixels.show(); // This sends the updated pixel color to the hardware.
+  
+    //shifts values in array up by one, leaving space for new values at start of strip. This gives our "chasing" effect
+    for(byte i=0;i<3;i++)
+    {
+      for(byte j = numpixels-1; j>0; j--)
+      {
+        if((pixelarray[j-1][i]) > 5)          //reduce intensity 5 after every shift
+        {
+          pixelarray[j][i] = pixelarray[j-1][i] -5;
+        }
+        else
+        {
+          pixelarray[j][i] = pixelarray[j-1][i];
+        }
+      }
+    }
+    
+    delay(10);  //Delay some time, otherwise things happen too fast to see
+  }
 
+  if(programme == 3) //random dimming chase (no audio control)
+  {
+      //First pixel in the chain is set to our latest colours
+      pixelarray[0][0] = random(255);
+      pixelarray[0][1] = random(255);
+      pixelarray[0][2] = random(255);
+      
+     //Goes through our bigass array and assigns values to every pixel as per the contents of the array
+     for(byte i=0;i<numpixels;i++)
+      {
+        pixels.setPixelColor(i, pixels.Color(pixelarray[i][0],pixelarray[i][1],pixelarray[i][2]));
+      }
+      
+      pixels.show(); // This sends the updated pixel color to the hardware.
+    
+      //shifts values in array up by one, leaving space for new values at start of strip. This gives our "chasing" effect
+      for(byte i=0;i<3;i++)
+      {
+        for(byte j = numpixels-1; j>0; j--)
+        {
+          if((pixelarray[j-1][i]) > 5)          //reduce intensity 5 after every shift
+          {
+            pixelarray[j][i] = pixelarray[j-1][i] -5;
+          }
+          else
+          {
+            pixelarray[j][i] = pixelarray[j-1][i];
+          }
+        }
+      }
+      delay(100);  //Delay some time, otherwise things happen too fast to see
+    }
+    
 }
