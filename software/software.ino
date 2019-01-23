@@ -57,7 +57,7 @@ void loop()
     if (buttonState == HIGH) 
     {
       programme++;
-      if(programme > 3) //Set highest programme number here
+      if(programme > 4) //Set highest programme number here
       {
         programme = 0;
       }
@@ -130,9 +130,13 @@ void loop()
     {
       for(byte j = numpixels-1; j>0; j--)
       {
-        if((pixelarray[j-1][i]) > 5)          //reduce intensity 5 after every shift
+        if((pixelarray[j-1][i]) > 15)
         {
-          pixelarray[j][i] = pixelarray[j-1][i] -5;
+          pixelarray[j][i] = pixelarray[j-1][i] -15;
+        }
+        else if((pixelarray[j-1][i]) > 2)
+        {
+          pixelarray[j][i] = pixelarray[j-1][i] -2;
         }
         else
         {
@@ -176,5 +180,18 @@ void loop()
       }
       delay(100);  //Delay some time, otherwise things happen too fast to see
     }
+
+  if(programme == 4)
+  {
+    
+    //Assigns every pixel value to our RGB values
+    for(byte i=0; i<numpixels; i++)
+    {
+      pixels.setPixelColor(i, pixels.Color(random(255),random(255),random(255)));
+    }
+
+    pixels.show(); // This sends the updated pixel color to the hardware.
+    delay(100);
+  }
     
 }
