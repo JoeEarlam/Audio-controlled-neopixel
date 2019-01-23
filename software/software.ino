@@ -71,16 +71,42 @@ void loop()
   green = pgm_read_byte(&gamma8[analogRead(1)/4]);   //Green is A1/4
   blue = pgm_read_byte(&gamma8[analogRead(2)/4]);   //Blue is A2/4
 
-  if(programme == 0) //block update
-  {
-    
-    //Assigns every pixel value to our RGB values
-    for(byte i=0; i<numpixels; i++)
+  if(programme == 0) //dimming chasing lights
     {
-      pixels.setPixelColor(i, pixels.Color(red,green,blue));
-    }
-
-    pixels.show(); // This sends the updated pixel color to the hardware.
+      //First pixel in the chain is set to our latest colours
+      pixelarray[0][0] = red;
+      pixelarray[0][1] = green;
+      pixelarray[0][2] = blue;
+      
+     //Goes through our bigass array and assigns values to every pixel as per the contents of the array
+     for(byte i=0;i<numpixels;i++)
+      {
+        pixels.setPixelColor(i, pixels.Color(pixelarray[i][0],pixelarray[i][1],pixelarray[i][2]));
+      }
+      
+      pixels.show(); // This sends the updated pixel color to the hardware.
+    
+      //shifts values in array up by one, leaving space for new values at start of strip. This gives our "chasing" effect
+      for(byte i=0;i<3;i++)
+      {
+        for(byte j = numpixels-1; j>0; j--)
+        {
+          if((pixelarray[j-1][i]) > 15)
+          {
+            pixelarray[j][i] = pixelarray[j-1][i] -15;
+          }
+          else if((pixelarray[j-1][i]) > 2)
+          {
+            pixelarray[j][i] = pixelarray[j-1][i] -2;
+          }
+          else
+          {
+            pixelarray[j][i] = pixelarray[j-1][i];
+          }
+        }
+      }
+    
+    delay(10);  //Delay some time, otherwise things happen too fast to see
   }
 
   if(programme == 1) //chasing lights
@@ -109,43 +135,17 @@ void loop()
     
     delay(10);  //Delay some time, otherwise things happen too fast to see
   }
-  
-  if(programme == 2) //dimming chasing lights
+
+  if(programme == 2) //block update
   {
-    //First pixel in the chain is set to our latest colours
-    pixelarray[0][0] = red;
-    pixelarray[0][1] = green;
-    pixelarray[0][2] = blue;
     
-   //Goes through our bigass array and assigns values to every pixel as per the contents of the array
-   for(byte i=0;i<numpixels;i++)
+    //Assigns every pixel value to our RGB values
+    for(byte i=0; i<numpixels; i++)
     {
-      pixels.setPixelColor(i, pixels.Color(pixelarray[i][0],pixelarray[i][1],pixelarray[i][2]));
+      pixels.setPixelColor(i, pixels.Color(red,green,blue));
     }
-    
+
     pixels.show(); // This sends the updated pixel color to the hardware.
-  
-    //shifts values in array up by one, leaving space for new values at start of strip. This gives our "chasing" effect
-    for(byte i=0;i<3;i++)
-    {
-      for(byte j = numpixels-1; j>0; j--)
-      {
-        if((pixelarray[j-1][i]) > 15)
-        {
-          pixelarray[j][i] = pixelarray[j-1][i] -15;
-        }
-        else if((pixelarray[j-1][i]) > 2)
-        {
-          pixelarray[j][i] = pixelarray[j-1][i] -2;
-        }
-        else
-        {
-          pixelarray[j][i] = pixelarray[j-1][i];
-        }
-      }
-    }
-    
-    delay(10);  //Delay some time, otherwise things happen too fast to see
   }
 
   if(programme == 3) //random dimming chase (no audio control)
