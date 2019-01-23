@@ -788,45 +788,45 @@ Input_L
 Text Label 1050 900  0    50   ~ 0
 Input_R
 Wire Wire Line
-	2650 2075 2575 2075
+	2550 2000 2475 2000
 Wire Wire Line
-	2575 2075 2575 2125
+	2475 2000 2475 2050
 Wire Wire Line
-	2650 1975 2575 1975
+	2550 1900 2475 1900
 Wire Wire Line
-	2575 1975 2575 1925
+	2475 1900 2475 1850
 $Comp
 L power:+12V #PWR0106
 U 1 1 5BF24254
-P 3675 1900
-F 0 "#PWR0106" H 3675 1750 50  0001 C CNN
-F 1 "+12V" H 3690 2073 50  0000 C CNN
-F 2 "" H 3675 1900 50  0001 C CNN
-F 3 "" H 3675 1900 50  0001 C CNN
-	1    3675 1900
+P 4075 1875
+F 0 "#PWR0106" H 4075 1725 50  0001 C CNN
+F 1 "+12V" H 4090 2048 50  0000 C CNN
+F 2 "" H 4075 1875 50  0001 C CNN
+F 3 "" H 4075 1875 50  0001 C CNN
+	1    4075 1875
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:-12V #PWR0107
 U 1 1 5BF242D9
-P 3725 2025
-F 0 "#PWR0107" H 3725 2125 50  0001 C CNN
-F 1 "-12V" H 3740 2198 50  0000 C CNN
-F 2 "" H 3725 2025 50  0001 C CNN
-F 3 "" H 3725 2025 50  0001 C CNN
-	1    3725 2025
+P 4125 2000
+F 0 "#PWR0107" H 4125 2100 50  0001 C CNN
+F 1 "-12V" H 4140 2173 50  0000 C CNN
+F 2 "" H 4125 2000 50  0001 C CNN
+F 3 "" H 4125 2000 50  0001 C CNN
+	1    4125 2000
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	3675 2150 3675 2125
+	4075 2125 4075 2100
 Wire Wire Line
-	3675 2125 3650 2125
+	4075 2100 4050 2100
 Wire Wire Line
-	3675 1900 3675 1925
+	4075 1875 4075 1900
 Wire Wire Line
-	3675 1925 3650 1925
+	4075 1900 4050 1900
 Wire Wire Line
-	3650 2025 3725 2025
+	4050 2000 4125 2000
 $Comp
 L Diode:BAT85 D3
 U 1 1 5BF54999
@@ -1087,23 +1087,23 @@ $EndComp
 $Comp
 L power:GND #PWR0111
 U 1 1 5C0E2BC2
-P 3675 2150
-F 0 "#PWR0111" H 3675 1900 50  0001 C CNN
-F 1 "GND" H 3680 1977 50  0000 C CNN
-F 2 "" H 3675 2150 50  0001 C CNN
-F 3 "" H 3675 2150 50  0001 C CNN
-	1    3675 2150
+P 4075 2125
+F 0 "#PWR0111" H 4075 1875 50  0001 C CNN
+F 1 "GND" H 4080 1952 50  0000 C CNN
+F 2 "" H 4075 2125 50  0001 C CNN
+F 3 "" H 4075 2125 50  0001 C CNN
+	1    4075 2125
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR0112
 U 1 1 5C111DEF
-P 2575 2125
-F 0 "#PWR0112" H 2575 1875 50  0001 C CNN
-F 1 "GND" H 2580 1952 50  0000 C CNN
-F 2 "" H 2575 2125 50  0001 C CNN
-F 3 "" H 2575 2125 50  0001 C CNN
-	1    2575 2125
+P 2475 2050
+F 0 "#PWR0112" H 2475 1800 50  0001 C CNN
+F 1 "GND" H 2480 1877 50  0000 C CNN
+F 2 "" H 2475 2050 50  0001 C CNN
+F 3 "" H 2475 2050 50  0001 C CNN
+	1    2475 2050
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1241,12 +1241,12 @@ $EndComp
 $Comp
 L power:+5V #PWR0125
 U 1 1 5C1563B7
-P 2575 1925
-F 0 "#PWR0125" H 2575 1775 50  0001 C CNN
-F 1 "+5V" H 2590 2098 50  0000 C CNN
-F 2 "" H 2575 1925 50  0001 C CNN
-F 3 "" H 2575 1925 50  0001 C CNN
-	1    2575 1925
+P 2475 1850
+F 0 "#PWR0125" H 2475 1700 50  0001 C CNN
+F 1 "+5V" H 2490 2023 50  0000 C CNN
+F 2 "" H 2475 1850 50  0001 C CNN
+F 3 "" H 2475 1850 50  0001 C CNN
+	1    2475 1850
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1271,20 +1271,9 @@ F 3 "" H 5575 4850 50  0001 C CNN
 	1    5575 4850
 	1    0    0    -1  
 $EndComp
-$Comp
-L audio-controlled-neopixel-rescue:TMAxxxxD-custom U4
-U 1 1 5BF146EE
-P 3150 2175
-F 0 "U4" H 2750 2625 50  0000 L CNN
-F 1 "TMA0512D" H 2750 2525 50  0000 L CNN
-F 2 "Footprints:TMAxxxxD" H 3250 2075 50  0001 C CIN
-F 3 "" H 3150 2175 50  0001 C CNN
-	1    3150 2175
-	1    0    0    -1  
-$EndComp
-Text Label 975  3175 2    50   ~ 0
-Input_L
 Text Label 975  3825 2    50   ~ 0
+Input_L
+Text Label 975  3175 2    50   ~ 0
 Input_R
 Wire Wire Line
 	975  3175 1125 3175
@@ -1682,33 +1671,6 @@ F 3 "" H 1200 1300 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	1200 1300 1200 1200
-$Comp
-L Connector:AudioJack3_Ground J1
-U 1 1 5C505DD1
-P 775 900
-F 0 "J1" H 751 1242 50  0000 C CNN
-F 1 "AudioJack3_Ground" H 751 1151 50  0000 C CNN
-F 2 "Footprints:Jack_3.5mm_PJ320E_Horizontal" H 775 900 50  0001 C CNN
-F 3 "~" H 775 900 50  0001 C CNN
-	1    775  900 
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	575  1200 1200 1200
-Connection ~ 1200 1200
-$Comp
-L Connector:AudioJack3_Ground J2
-U 1 1 5C561508
-P 1600 900
-F 0 "J2" H 1600 1225 50  0000 R CNN
-F 1 "AudioJack3_Ground" H 1850 1150 50  0000 R CNN
-F 2 "Footprints:Jack_3.5mm_PJ320E_Horizontal" H 1600 900 50  0001 C CNN
-F 3 "~" H 1600 900 50  0001 C CNN
-	1    1600 900 
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	1800 1200 1200 1200
 Wire Wire Line
 	925  7325 925  7300
 $Comp
@@ -1780,4 +1742,49 @@ Wire Wire Line
 	4950 4550 5000 4550
 Text Notes 3325 4975 0    50   ~ 0
 R19/20 define attenuation for peak level calibration
+$Comp
+L Connector:AudioJack4 J1
+U 1 1 5C4A06F4
+P 775 1100
+F 0 "J1" H 445 983 50  0000 R CNN
+F 1 "AudioJack4" H 445 1074 50  0000 R CNN
+F 2 "Connector_Audio:Jack_3.5mm_PJ320D_Horizontal" H 775 1100 50  0001 C CNN
+F 3 "~" H 775 1100 50  0001 C CNN
+	1    775  1100
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	975  1200 1200 1200
+$Comp
+L Connector:AudioJack4 J2
+U 1 1 5C4A1B28
+P 1600 1100
+F 0 "J2" H 1270 983 50  0000 R CNN
+F 1 "AudioJack4" H 1270 1074 50  0000 R CNN
+F 2 "Connector_Audio:Jack_3.5mm_PJ320D_Horizontal" H 1600 1100 50  0001 C CNN
+F 3 "~" H 1600 1100 50  0001 C CNN
+	1    1600 1100
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1400 1200 1200 1200
+Connection ~ 1200 1200
+$Comp
+L TMA_2412D:TMA_2412D U2
+U 1 1 5C4B4FE3
+P 2550 1900
+F 0 "U2" H 3300 2165 50  0000 C CNN
+F 1 "TMA0512D" H 3300 2074 50  0000 C CNN
+F 2 "custom:TMA-0512D" H 3900 2000 50  0001 L CNN
+F 3 "http://docs-emea.rs-online.com/webdocs/0e18/0900766b80e182f0.pdf" H 3900 1900 50  0001 L CNN
+F 4 "TMA2412D unregulated DC-DC,+/-12V 1W 1W Isolated DC-DC Converter, Vin 21.6" H 3900 1800 50  0001 L CNN "Description"
+F 5 "Traco Power" H 3900 1600 50  0001 L CNN "Manufacturer_Name"
+F 6 "TMA 2412D" H 3900 1500 50  0001 L CNN "Manufacturer_Part_Number"
+F 7 "1247598" H 3900 1400 50  0001 L CNN "RS Part Number"
+F 8 "http://uk.rs-online.com/web/p/products/1247598" H 3900 1300 50  0001 L CNN "RS Price/Stock"
+F 9 "495-TMA-2412D" H 3900 1200 50  0001 L CNN "Mouser Part Number"
+F 10 "https://www.mouser.com/Search/Refine.aspx?Keyword=495-TMA-2412D" H 3900 1100 50  0001 L CNN "Mouser Price/Stock"
+	1    2550 1900
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
