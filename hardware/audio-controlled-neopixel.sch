@@ -93,12 +93,10 @@ Text Label 7425 1050 0    50   ~ 0
 Low
 Connection ~ 7225 1050
 Wire Wire Line
-	5600 1200 5600 1250
+	5600 1200 5600 1225
 Wire Wire Line
 	6875 1050 6925 1050
 Connection ~ 6925 1050
-Text Label 4975 2050 2    50   ~ 0
-Buf_input
 Wire Wire Line
 	6550 2150 6550 2400
 Wire Wire Line
@@ -180,8 +178,6 @@ Wire Wire Line
 Wire Wire Line
 	6875 2150 6925 2150
 Connection ~ 6925 2150
-Text Label 5000 3325 2    50   ~ 0
-Buf_input
 Wire Wire Line
 	6550 3425 6550 3675
 Wire Wire Line
@@ -293,15 +289,13 @@ Wire Wire Line
 	5525 2050 5600 2050
 Connection ~ 5275 2050
 Wire Wire Line
-	4975 2050 5000 2050
-Wire Wire Line
 	5275 2325 5600 2325
 Connection ~ 5600 2325
 Wire Wire Line
 	5600 2325 5600 2400
-Connection ~ 5600 1250
+Connection ~ 5600 1225
 Wire Wire Line
-	5600 1250 5600 1275
+	5600 1225 5600 1275
 Wire Wire Line
 	6925 1375 6925 1350
 Connection ~ 6925 1350
@@ -378,8 +372,6 @@ Wire Wire Line
 	5325 3600 5325 3650
 Wire Wire Line
 	6550 2400 5900 2400
-Text Label 4975 950  2    50   ~ 0
-Buf_input
 $Comp
 L Device:R_Small R8
 U 1 1 5BD5346B
@@ -408,13 +400,9 @@ Wire Wire Line
 	5275 950  5275 1000
 Connection ~ 5275 950 
 Wire Wire Line
-	4975 950  5000 950 
-Wire Wire Line
 	5275 950  5325 950 
 Wire Wire Line
-	5600 1250 5275 1250
-Wire Wire Line
-	5275 1200 5275 1250
+	5600 1225 5275 1225
 Wire Wire Line
 	5600 950  5925 950 
 Text Notes 5175 650  0    50   ~ 0
@@ -423,8 +411,6 @@ Text Notes 5250 1800 0    50   ~ 0
 413Hz-2.5KHz
 Text Notes 5300 3075 0    50   ~ 0
 2.5KHz-20KHz
-Wire Wire Line
-	5000 3325 5050 3325
 Connection ~ 7225 2150
 $Comp
 L Device:C_Small C15
@@ -670,7 +656,7 @@ Wire Wire Line
 	8575 1775 8525 1775
 Wire Wire Line
 	8525 1775 8525 1725
-Text Label 4950 4550 2    50   ~ 0
+Text Label 5200 4250 2    50   ~ 0
 Buf_input
 $Comp
 L Device:R_Small R1
@@ -788,45 +774,45 @@ Input_L
 Text Label 1050 900  0    50   ~ 0
 Input_R
 Wire Wire Line
-	2550 2000 2475 2000
+	2450 1975 2375 1975
 Wire Wire Line
-	2475 2000 2475 2050
+	2375 1975 2375 2025
 Wire Wire Line
-	2550 1900 2475 1900
+	2450 1875 2375 1875
 Wire Wire Line
-	2475 1900 2475 1850
+	2375 1875 2375 1825
 $Comp
 L power:+12V #PWR0106
 U 1 1 5BF24254
-P 4075 1875
-F 0 "#PWR0106" H 4075 1725 50  0001 C CNN
-F 1 "+12V" H 4090 2048 50  0000 C CNN
-F 2 "" H 4075 1875 50  0001 C CNN
-F 3 "" H 4075 1875 50  0001 C CNN
-	1    4075 1875
+P 3975 1850
+F 0 "#PWR0106" H 3975 1700 50  0001 C CNN
+F 1 "+12V" H 3990 2023 50  0000 C CNN
+F 2 "" H 3975 1850 50  0001 C CNN
+F 3 "" H 3975 1850 50  0001 C CNN
+	1    3975 1850
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:-12V #PWR0107
 U 1 1 5BF242D9
-P 4125 2000
-F 0 "#PWR0107" H 4125 2100 50  0001 C CNN
-F 1 "-12V" H 4140 2173 50  0000 C CNN
-F 2 "" H 4125 2000 50  0001 C CNN
-F 3 "" H 4125 2000 50  0001 C CNN
-	1    4125 2000
+P 4025 1975
+F 0 "#PWR0107" H 4025 2075 50  0001 C CNN
+F 1 "-12V" H 4040 2148 50  0000 C CNN
+F 2 "" H 4025 1975 50  0001 C CNN
+F 3 "" H 4025 1975 50  0001 C CNN
+	1    4025 1975
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	4075 2125 4075 2100
+	3975 2100 3975 2075
 Wire Wire Line
-	4075 2100 4050 2100
+	3975 2075 3950 2075
 Wire Wire Line
-	4075 1875 4075 1900
+	3975 1850 3975 1875
 Wire Wire Line
-	4075 1900 4050 1900
+	3975 1875 3950 1875
 Wire Wire Line
-	4050 2000 4125 2000
+	3950 1975 4025 1975
 $Comp
 L Diode:BAT85 D3
 U 1 1 5BF54999
@@ -970,8 +956,6 @@ F 3 "~" H 5375 4550 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	5200 4550 5250 4550
-Wire Wire Line
 	2525 3375 2525 3500
 Wire Wire Line
 	2250 3275 2250 3500
@@ -1087,23 +1071,23 @@ $EndComp
 $Comp
 L power:GND #PWR0111
 U 1 1 5C0E2BC2
-P 4075 2125
-F 0 "#PWR0111" H 4075 1875 50  0001 C CNN
-F 1 "GND" H 4080 1952 50  0000 C CNN
-F 2 "" H 4075 2125 50  0001 C CNN
-F 3 "" H 4075 2125 50  0001 C CNN
-	1    4075 2125
+P 3975 2100
+F 0 "#PWR0111" H 3975 1850 50  0001 C CNN
+F 1 "GND" H 3980 1927 50  0000 C CNN
+F 2 "" H 3975 2100 50  0001 C CNN
+F 3 "" H 3975 2100 50  0001 C CNN
+	1    3975 2100
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR0112
 U 1 1 5C111DEF
-P 2475 2050
-F 0 "#PWR0112" H 2475 1800 50  0001 C CNN
-F 1 "GND" H 2480 1877 50  0000 C CNN
-F 2 "" H 2475 2050 50  0001 C CNN
-F 3 "" H 2475 2050 50  0001 C CNN
-	1    2475 2050
+P 2375 2025
+F 0 "#PWR0112" H 2375 1775 50  0001 C CNN
+F 1 "GND" H 2380 1852 50  0000 C CNN
+F 2 "" H 2375 2025 50  0001 C CNN
+F 3 "" H 2375 2025 50  0001 C CNN
+	1    2375 2025
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1241,12 +1225,12 @@ $EndComp
 $Comp
 L power:+5V #PWR0125
 U 1 1 5C1563B7
-P 2475 1850
-F 0 "#PWR0125" H 2475 1700 50  0001 C CNN
-F 1 "+5V" H 2490 2023 50  0000 C CNN
-F 2 "" H 2475 1850 50  0001 C CNN
-F 3 "" H 2475 1850 50  0001 C CNN
-	1    2475 1850
+P 2375 1825
+F 0 "#PWR0125" H 2375 1675 50  0001 C CNN
+F 1 "+5V" H 2390 1998 50  0000 C CNN
+F 2 "" H 2375 1825 50  0001 C CNN
+F 3 "" H 2375 1825 50  0001 C CNN
+	1    2375 1825
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1707,13 +1691,13 @@ Wire Wire Line
 $Comp
 L Device:R_Small R19
 U 1 1 5C3F66FF
-P 5100 4550
-F 0 "R19" H 5175 4575 50  0000 L CNN
-F 1 "10K" H 5175 4500 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" H 5100 4550 50  0001 C CNN
-F 3 "~" H 5100 4550 50  0001 C CNN
-	1    5100 4550
-	0    -1   -1   0   
+P 5250 4400
+F 0 "R19" H 5325 4425 50  0000 L CNN
+F 1 "100K" H 5325 4350 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 5250 4400 50  0001 C CNN
+F 3 "~" H 5250 4400 50  0001 C CNN
+	1    5250 4400
+	-1   0    0    1   
 $EndComp
 $Comp
 L Device:R_Small R20
@@ -1728,7 +1712,6 @@ F 3 "~" H 5250 4700 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	5250 4600 5250 4550
-Connection ~ 5250 4550
 Wire Wire Line
 	5250 4550 5275 4550
 Wire Wire Line
@@ -1739,7 +1722,7 @@ Connection ~ 5575 4825
 Wire Wire Line
 	5575 4825 5575 4800
 Wire Wire Line
-	4950 4550 5000 4550
+	5200 4250 5250 4250
 Text Notes 3325 4975 0    50   ~ 0
 R19/20 define attenuation for peak level calibration
 $Comp
@@ -1772,19 +1755,145 @@ Connection ~ 1200 1200
 $Comp
 L TMA_2412D:TMA_2412D U2
 U 1 1 5C4B4FE3
-P 2550 1900
-F 0 "U2" H 3300 2165 50  0000 C CNN
-F 1 "TMA0512D" H 3300 2074 50  0000 C CNN
-F 2 "custom:TMA-0512D" H 3900 2000 50  0001 L CNN
-F 3 "http://docs-emea.rs-online.com/webdocs/0e18/0900766b80e182f0.pdf" H 3900 1900 50  0001 L CNN
-F 4 "TMA2412D unregulated DC-DC,+/-12V 1W 1W Isolated DC-DC Converter, Vin 21.6" H 3900 1800 50  0001 L CNN "Description"
-F 5 "Traco Power" H 3900 1600 50  0001 L CNN "Manufacturer_Name"
-F 6 "TMA 2412D" H 3900 1500 50  0001 L CNN "Manufacturer_Part_Number"
-F 7 "1247598" H 3900 1400 50  0001 L CNN "RS Part Number"
-F 8 "http://uk.rs-online.com/web/p/products/1247598" H 3900 1300 50  0001 L CNN "RS Price/Stock"
-F 9 "495-TMA-2412D" H 3900 1200 50  0001 L CNN "Mouser Part Number"
-F 10 "https://www.mouser.com/Search/Refine.aspx?Keyword=495-TMA-2412D" H 3900 1100 50  0001 L CNN "Mouser Price/Stock"
-	1    2550 1900
+P 2450 1875
+F 0 "U2" H 3200 2140 50  0000 C CNN
+F 1 "TMA0512D" H 3200 2049 50  0000 C CNN
+F 2 "custom:TMA-0512D" H 3800 1975 50  0001 L CNN
+F 3 "http://docs-emea.rs-online.com/webdocs/0e18/0900766b80e182f0.pdf" H 3800 1875 50  0001 L CNN
+F 4 "TMA2412D unregulated DC-DC,+/-12V 1W 1W Isolated DC-DC Converter, Vin 21.6" H 3800 1775 50  0001 L CNN "Description"
+F 5 "Traco Power" H 3800 1575 50  0001 L CNN "Manufacturer_Name"
+F 6 "TMA 2412D" H 3800 1475 50  0001 L CNN "Manufacturer_Part_Number"
+F 7 "1247598" H 3800 1375 50  0001 L CNN "RS Part Number"
+F 8 "http://uk.rs-online.com/web/p/products/1247598" H 3800 1275 50  0001 L CNN "RS Price/Stock"
+F 9 "495-TMA-2412D" H 3800 1175 50  0001 L CNN "Mouser Part Number"
+F 10 "https://www.mouser.com/Search/Refine.aspx?Keyword=495-TMA-2412D" H 3800 1075 50  0001 L CNN "Mouser Price/Stock"
+	1    2450 1875
 	1    0    0    -1  
 $EndComp
+Text Label 4950 3050 2    50   ~ 0
+Buf_input
+$Comp
+L Device:R_Small R?
+U 1 1 5C4F25BC
+P 5000 3200
+F 0 "R?" H 5075 3225 50  0000 L CNN
+F 1 "0R" H 5075 3150 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 5000 3200 50  0001 C CNN
+F 3 "~" H 5000 3200 50  0001 C CNN
+	1    5000 3200
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 5C4F25C3
+P 5000 3475
+F 0 "R?" H 5075 3500 50  0000 L CNN
+F 1 "NF" H 5075 3425 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 5000 3475 50  0001 C CNN
+F 3 "~" H 5000 3475 50  0001 C CNN
+	1    5000 3475
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4950 3050 5000 3050
+Wire Wire Line
+	5000 3375 5000 3325
+Wire Wire Line
+	5000 3325 5050 3325
+Wire Wire Line
+	5000 3575 5000 3600
+Wire Wire Line
+	5000 3600 5325 3600
+Text Label 4850 1750 2    50   ~ 0
+Buf_input
+$Comp
+L Device:R_Small R?
+U 1 1 5C53A2E4
+P 4925 1900
+F 0 "R?" H 5000 1925 50  0000 L CNN
+F 1 "100K" H 5000 1850 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 4925 1900 50  0001 C CNN
+F 3 "~" H 4925 1900 50  0001 C CNN
+	1    4925 1900
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 5C53A2EA
+P 4925 2200
+F 0 "R?" H 5000 2225 50  0000 L CNN
+F 1 "169K" H 5000 2150 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 4925 2200 50  0001 C CNN
+F 3 "~" H 4925 2200 50  0001 C CNN
+	1    4925 2200
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4925 2100 4925 2050
+Wire Wire Line
+	4925 2300 4925 2325
+Wire Wire Line
+	4925 2050 5000 2050
+Wire Wire Line
+	4925 2325 5275 2325
+Connection ~ 5275 2325
+Text Label 4850 650  2    50   ~ 0
+Buf_input
+$Comp
+L Device:R_Small R?
+U 1 1 5C5862DE
+P 4900 800
+F 0 "R?" H 4975 825 50  0000 L CNN
+F 1 "100K" H 4975 750 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 4900 800 50  0001 C CNN
+F 3 "~" H 4900 800 50  0001 C CNN
+	1    4900 800 
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 5C5862E4
+P 4900 1100
+F 0 "R?" H 4975 1125 50  0000 L CNN
+F 1 "250K" H 4975 1050 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 4900 1100 50  0001 C CNN
+F 3 "~" H 4900 1100 50  0001 C CNN
+	1    4900 1100
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4850 650  4900 650 
+Wire Wire Line
+	4900 1000 4900 950 
+Wire Wire Line
+	4900 1200 4900 1225
+Wire Wire Line
+	4900 950  5000 950 
+Wire Wire Line
+	5275 1200 5275 1225
+Wire Wire Line
+	4900 1225 5275 1225
+Connection ~ 5275 1225
+Wire Wire Line
+	4925 2000 4925 2050
+Connection ~ 4925 2050
+Wire Wire Line
+	4925 1750 4925 1800
+Wire Wire Line
+	4850 1750 4925 1750
+Wire Wire Line
+	4900 900  4900 950 
+Connection ~ 4900 950 
+Wire Wire Line
+	4900 650  4900 700 
+Wire Wire Line
+	5000 3300 5000 3325
+Connection ~ 5000 3325
+Wire Wire Line
+	5000 3050 5000 3100
+Wire Wire Line
+	5250 4500 5250 4550
+Connection ~ 5250 4550
+Wire Wire Line
+	5250 4250 5250 4300
 $EndSCHEMATC
