@@ -15,7 +15,7 @@ boolean lastButtonState;      //previous state of button
 
 byte red;                     //red pixel value
 byte green;                   //green...
-byte blue;                    //etc
+int blue;                    //etc
 byte programme;               //current programme type (0 = block, 1 = chasing lights)
 
 byte pixelarray[numpixels][3];    //2D Array to hold status of every pixel
@@ -69,7 +69,9 @@ void loop()
   //Saves current RGB values to memory for use by routines
   red = pgm_read_byte(&gamma8[analogRead(0)/4]);    //Red is A0/4 (0-255 output, 0-1023 input)
   green = pgm_read_byte(&gamma8[analogRead(1)/4]);   //Green is A1/4
-  blue = pgm_read_byte(&gamma8[analogRead(2)/4]);   //Blue is A2/4
+  blue = analogRead(2)/3;
+  if(blue > 255) blue = 255;                        //blue is less sensitive so we do some dirty compression on it
+  blue = pgm_read_byte(&gamma8[blue]);
 
   if(programme == 0) //dimming chasing lights
     {
