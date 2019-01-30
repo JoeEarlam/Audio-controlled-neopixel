@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:audio-controlled-neopixel-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
@@ -1753,7 +1754,7 @@ Wire Wire Line
 	1400 1200 1200 1200
 Connection ~ 1200 1200
 $Comp
-L TMA_2412D:TMA_2412D U2
+L audio-controlled-neopixel-cache:TMA_2412D_TMA_2412D U2
 U 1 1 5C4B4FE3
 P 2450 1875
 F 0 "U2" H 3200 2140 50  0000 C CNN

@@ -1,3 +1,5 @@
 (sym_lib_table
   (lib (name audio-controlled-neopixel-rescue)(type Legacy)(uri ${KIPRJMOD}/audio-controlled-neopixel-rescue.lib)(options "")(descr ""))
+  (lib (name audio-controlled-neopixel)(type Legacy)(uri ${KIPRJMOD}/audio-controlled-neopixel.lib)(options "")(descr ""))
+  (lib (name audio-controlled-neopixel-cache)(type Legacy)(uri ${KIPRJMOD}/audio-controlled-neopixel-cache.lib)(options "")(descr ""))
 )

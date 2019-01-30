@@ -343,11 +343,11 @@ X B 2 200 0 100 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# TMA_2412D_TMA_2412D
+# audio-controlled-neopixel-cache_TMA_2412D_TMA_2412D
 #
-DEF TMA_2412D_TMA_2412D U 0 30 Y Y 1 F N
+DEF audio-controlled-neopixel-cache_TMA_2412D_TMA_2412D U 0 30 Y Y 1 F N
 F0 "U" 1350 300 50 H V L CNN
-F1 "TMA_2412D_TMA_2412D" 1350 200 50 H V L CNN
+F1 "audio-controlled-neopixel-cache_TMA_2412D_TMA_2412D" 1350 200 50 H V L CNN
 F2 "TMA-0512D" 1350 100 50 H I L CNN
 F3 "http://docs-emea.rs-online.com/webdocs/0e18/0900766b80e182f0.pdf" 1350 0 50 H I L CNN
 F4 "TMA2412D unregulated DC-DC,+/-12V 1W 1W Isolated DC-DC Converter, Vin 21.6" 1350 -100 50 H I L CNN "Description"
