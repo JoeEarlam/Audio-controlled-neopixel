@@ -785,35 +785,35 @@ Wire Wire Line
 $Comp
 L power:+12V #PWR0106
 U 1 1 5BF24254
-P 3975 1850
-F 0 "#PWR0106" H 3975 1700 50  0001 C CNN
-F 1 "+12V" H 3990 2023 50  0000 C CNN
-F 2 "" H 3975 1850 50  0001 C CNN
-F 3 "" H 3975 1850 50  0001 C CNN
-	1    3975 1850
+P 3475 1800
+F 0 "#PWR0106" H 3475 1650 50  0001 C CNN
+F 1 "+12V" H 3490 1973 50  0000 C CNN
+F 2 "" H 3475 1800 50  0001 C CNN
+F 3 "" H 3475 1800 50  0001 C CNN
+	1    3475 1800
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:-12V #PWR0107
 U 1 1 5BF242D9
-P 4025 1975
-F 0 "#PWR0107" H 4025 2075 50  0001 C CNN
-F 1 "-12V" H 4040 2148 50  0000 C CNN
-F 2 "" H 4025 1975 50  0001 C CNN
-F 3 "" H 4025 1975 50  0001 C CNN
-	1    4025 1975
+P 3525 1925
+F 0 "#PWR0107" H 3525 2025 50  0001 C CNN
+F 1 "-12V" H 3540 2098 50  0000 C CNN
+F 2 "" H 3525 1925 50  0001 C CNN
+F 3 "" H 3525 1925 50  0001 C CNN
+	1    3525 1925
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	3975 2100 3975 2075
+	3475 2050 3475 2025
 Wire Wire Line
-	3975 2075 3950 2075
+	3475 2025 3450 2025
 Wire Wire Line
-	3975 1850 3975 1875
+	3475 1800 3475 1825
 Wire Wire Line
-	3975 1875 3950 1875
+	3475 1825 3450 1825
 Wire Wire Line
-	3950 1975 4025 1975
+	3450 1925 3525 1925
 $Comp
 L Diode:BAT85 D3
 U 1 1 5BF54999
@@ -1072,12 +1072,12 @@ $EndComp
 $Comp
 L power:GND #PWR0111
 U 1 1 5C0E2BC2
-P 3975 2100
-F 0 "#PWR0111" H 3975 1850 50  0001 C CNN
-F 1 "GND" H 3980 1927 50  0000 C CNN
-F 2 "" H 3975 2100 50  0001 C CNN
-F 3 "" H 3975 2100 50  0001 C CNN
-	1    3975 2100
+P 3475 2050
+F 0 "#PWR0111" H 3475 1800 50  0001 C CNN
+F 1 "GND" H 3480 1877 50  0000 C CNN
+F 2 "" H 3475 2050 50  0001 C CNN
+F 3 "" H 3475 2050 50  0001 C CNN
+	1    3475 2050
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1753,31 +1753,13 @@ $EndComp
 Wire Wire Line
 	1400 1200 1200 1200
 Connection ~ 1200 1200
-$Comp
-L audio-controlled-neopixel-cache:TMA_2412D_TMA_2412D U2
-U 1 1 5C4B4FE3
-P 2450 1875
-F 0 "U2" H 3200 2140 50  0000 C CNN
-F 1 "TMA0512D" H 3200 2049 50  0000 C CNN
-F 2 "custom:TMA-0512D" H 3800 1975 50  0001 L CNN
-F 3 "http://docs-emea.rs-online.com/webdocs/0e18/0900766b80e182f0.pdf" H 3800 1875 50  0001 L CNN
-F 4 "TMA2412D unregulated DC-DC,+/-12V 1W 1W Isolated DC-DC Converter, Vin 21.6" H 3800 1775 50  0001 L CNN "Description"
-F 5 "Traco Power" H 3800 1575 50  0001 L CNN "Manufacturer_Name"
-F 6 "TMA 2412D" H 3800 1475 50  0001 L CNN "Manufacturer_Part_Number"
-F 7 "1247598" H 3800 1375 50  0001 L CNN "RS Part Number"
-F 8 "http://uk.rs-online.com/web/p/products/1247598" H 3800 1275 50  0001 L CNN "RS Price/Stock"
-F 9 "495-TMA-2412D" H 3800 1175 50  0001 L CNN "Mouser Part Number"
-F 10 "https://www.mouser.com/Search/Refine.aspx?Keyword=495-TMA-2412D" H 3800 1075 50  0001 L CNN "Mouser Price/Stock"
-	1    2450 1875
-	1    0    0    -1  
-$EndComp
 Text Label 4950 3050 2    50   ~ 0
 Buf_input
 $Comp
-L Device:R_Small R?
+L Device:R_Small R25
 U 1 1 5C4F25BC
 P 5000 3200
-F 0 "R?" H 5075 3225 50  0000 L CNN
+F 0 "R25" H 5075 3225 50  0000 L CNN
 F 1 "0R" H 5075 3150 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric" H 5000 3200 50  0001 C CNN
 F 3 "~" H 5000 3200 50  0001 C CNN
@@ -1785,10 +1767,10 @@ F 3 "~" H 5000 3200 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Device:R_Small R?
+L Device:R_Small R26
 U 1 1 5C4F25C3
 P 5000 3475
-F 0 "R?" H 5075 3500 50  0000 L CNN
+F 0 "R26" H 5075 3500 50  0000 L CNN
 F 1 "NF" H 5075 3425 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric" H 5000 3475 50  0001 C CNN
 F 3 "~" H 5000 3475 50  0001 C CNN
@@ -1808,10 +1790,10 @@ Wire Wire Line
 Text Label 4850 1750 2    50   ~ 0
 Buf_input
 $Comp
-L Device:R_Small R?
+L Device:R_Small R23
 U 1 1 5C53A2E4
 P 4925 1900
-F 0 "R?" H 5000 1925 50  0000 L CNN
+F 0 "R23" H 5000 1925 50  0000 L CNN
 F 1 "100K" H 5000 1850 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric" H 4925 1900 50  0001 C CNN
 F 3 "~" H 4925 1900 50  0001 C CNN
@@ -1819,10 +1801,10 @@ F 3 "~" H 4925 1900 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Device:R_Small R?
+L Device:R_Small R24
 U 1 1 5C53A2EA
 P 4925 2200
-F 0 "R?" H 5000 2225 50  0000 L CNN
+F 0 "R24" H 5000 2225 50  0000 L CNN
 F 1 "169K" H 5000 2150 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric" H 4925 2200 50  0001 C CNN
 F 3 "~" H 4925 2200 50  0001 C CNN
@@ -1841,10 +1823,10 @@ Connection ~ 5275 2325
 Text Label 4850 650  2    50   ~ 0
 Buf_input
 $Comp
-L Device:R_Small R?
+L Device:R_Small R21
 U 1 1 5C5862DE
 P 4900 800
-F 0 "R?" H 4975 825 50  0000 L CNN
+F 0 "R21" H 4975 825 50  0000 L CNN
 F 1 "100K" H 4975 750 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric" H 4900 800 50  0001 C CNN
 F 3 "~" H 4900 800 50  0001 C CNN
@@ -1852,10 +1834,10 @@ F 3 "~" H 4900 800 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Device:R_Small R?
+L Device:R_Small R22
 U 1 1 5C5862E4
 P 4900 1100
-F 0 "R?" H 4975 1125 50  0000 L CNN
+F 0 "R22" H 4975 1125 50  0000 L CNN
 F 1 "250K" H 4975 1050 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric" H 4900 1100 50  0001 C CNN
 F 3 "~" H 4900 1100 50  0001 C CNN
@@ -1897,4 +1879,22 @@ Wire Wire Line
 Connection ~ 5250 4550
 Wire Wire Line
 	5250 4250 5250 4300
+$Comp
+L audio-controlled-neopixel:custom_TMAxxxxD U2
+U 1 1 5C4B4FE3
+P 2950 2075
+F 0 "U2" H 2775 1725 50  0000 C CNN
+F 1 "TMA0512D" H 3025 1950 50  0000 C CNN
+F 2 "Footprints:TMAxxxxD" H 4300 2175 50  0001 L CNN
+F 3 "http://docs-emea.rs-online.com/webdocs/0e18/0900766b80e182f0.pdf" H 4300 2075 50  0001 L CNN
+F 4 "TMA2412D unregulated DC-DC,+/-12V 1W 1W Isolated DC-DC Converter, Vin 21.6" H 4300 1975 50  0001 L CNN "Description"
+F 5 "Traco Power" H 4300 1775 50  0001 L CNN "Manufacturer_Name"
+F 6 "TMA 2412D" H 4300 1675 50  0001 L CNN "Manufacturer_Part_Number"
+F 7 "1247598" H 4300 1575 50  0001 L CNN "RS Part Number"
+F 8 "http://uk.rs-online.com/web/p/products/1247598" H 4300 1475 50  0001 L CNN "RS Price/Stock"
+F 9 "495-TMA-2412D" H 4300 1375 50  0001 L CNN "Mouser Part Number"
+F 10 "https://www.mouser.com/Search/Refine.aspx?Keyword=495-TMA-2412D" H 4300 1275 50  0001 L CNN "Mouser Price/Stock"
+	1    2950 2075
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
