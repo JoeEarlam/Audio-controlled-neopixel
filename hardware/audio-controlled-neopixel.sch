@@ -527,18 +527,6 @@ Wire Wire Line
 Wire Wire Line
 	3200 3900 2525 3900
 Connection ~ 2525 3900
-Wire Wire Line
-	5475 4550 5575 4550
-Wire Wire Line
-	6650 4650 6525 4650
-Wire Wire Line
-	6650 4975 6650 4650
-Wire Wire Line
-	5875 4975 6650 4975
-Wire Wire Line
-	5875 4750 5875 4975
-Wire Wire Line
-	5925 4750 5875 4750
 $Comp
 L power:+12V #PWR021
 U 1 1 5BE11C9A
@@ -657,76 +645,6 @@ Wire Wire Line
 	8575 1775 8525 1775
 Wire Wire Line
 	8525 1775 8525 1725
-Text Label 5200 4250 2    50   ~ 0
-Buf_input
-$Comp
-L Device:R_Small R1
-U 1 1 5C015F6A
-P 5575 4700
-F 0 "R1" H 5650 4725 50  0000 L CNN
-F 1 "100K" H 5650 4650 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" H 5575 4700 50  0001 C CNN
-F 3 "~" H 5575 4700 50  0001 C CNN
-	1    5575 4700
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5575 4600 5575 4550
-Connection ~ 5575 4550
-Wire Wire Line
-	5575 4550 5925 4550
-Wire Wire Line
-	5575 4850 5575 4825
-$Comp
-L Device:C_Small C3
-U 1 1 5C02A13C
-P 7000 4800
-F 0 "C3" H 7092 4846 50  0000 L CNN
-F 1 "100n" H 7092 4755 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 7000 4800 50  0001 C CNN
-F 3 "~" H 7000 4800 50  0001 C CNN
-	1    7000 4800
-	-1   0    0    -1  
-$EndComp
-$Comp
-L Device:R_Small R6
-U 1 1 5C02A386
-P 7250 4800
-F 0 "R6" H 7309 4846 50  0000 L CNN
-F 1 "1M" H 7309 4755 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" H 7250 4800 50  0001 C CNN
-F 3 "~" H 7250 4800 50  0001 C CNN
-	1    7250 4800
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7250 4700 7250 4650
-Wire Wire Line
-	7000 4700 7000 4650
-Connection ~ 7000 4650
-Wire Wire Line
-	7000 4650 6975 4650
-Wire Wire Line
-	6675 4650 6650 4650
-Connection ~ 6650 4650
-Wire Wire Line
-	7000 4900 7000 4950
-Wire Wire Line
-	7000 4950 7250 4950
-Wire Wire Line
-	7250 4950 7250 4900
-Wire Wire Line
-	7000 5000 7000 4950
-Connection ~ 7000 4950
-Wire Wire Line
-	7000 4650 7250 4650
-Connection ~ 7250 4650
-Wire Wire Line
-	7250 4650 7700 4650
-Wire Wire Line
-	7550 4550 7550 4850
-Wire Wire Line
-	7550 4850 7700 4850
 $Comp
 L Device:LED_Small_ALT D2
 U 1 1 5C098684
@@ -752,19 +670,7 @@ F 3 "~" H 8425 5300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8675 4750 8425 4750
-Connection ~ 8425 4750
-Wire Wire Line
-	8425 5000 8425 5100
-Wire Wire Line
-	8675 5100 8425 5100
-Connection ~ 8425 5100
-Wire Wire Line
-	8425 5100 8425 5200
-Wire Wire Line
 	8425 5450 8425 5400
-Text Notes 6775 4275 0    50   ~ 0
-Peak detector
 Wire Wire Line
 	3200 3925 3200 3900
 Connection ~ 3200 3900
@@ -815,21 +721,6 @@ Wire Wire Line
 Wire Wire Line
 	3450 1925 3525 1925
 $Comp
-L Diode:BAT85 D3
-U 1 1 5BF54999
-P 8675 4925
-F 0 "D3" V 8629 5004 50  0000 L CNN
-F 1 "1N5819" V 8720 5004 50  0000 L CNN
-F 2 "Diode_SMD:D_SOD-123" H 8675 4750 50  0001 C CNN
-F 3 "http://www.nxp.com/documents/data_sheet/BAT85.pdf" H 8675 4925 50  0001 C CNN
-	1    8675 4925
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	8675 4775 8675 4750
-Wire Wire Line
-	8675 5075 8675 5100
-$Comp
 L Diode:BAT85 D7
 U 1 1 5BF7321B
 P 7375 850
@@ -875,8 +766,6 @@ F 3 "~" H 4050 950 50  0001 C CNN
 $EndComp
 Text Label 3775 950  2    50   ~ 0
 Neopixel
-Wire Wire Line
-	8300 4750 8425 4750
 Wire Wire Line
 	3775 950  3850 950 
 $Comp
@@ -945,17 +834,6 @@ Wire Wire Line
 Connection ~ 1000 2225
 Wire Wire Line
 	1000 2225 1000 2250
-$Comp
-L Device:C_Small C20
-U 1 1 5C1986B5
-P 5375 4550
-F 0 "C20" V 5146 4550 50  0000 C CNN
-F 1 "100n" V 5237 4550 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 5375 4550 50  0001 C CNN
-F 3 "~" H 5375 4550 50  0001 C CNN
-	1    5375 4550
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	2525 3375 2525 3500
 Wire Wire Line
@@ -1125,17 +1003,6 @@ F 3 "" H 6925 3750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0116
-U 1 1 5C153C30
-P 7000 5000
-F 0 "#PWR0116" H 7000 4750 50  0001 C CNN
-F 1 "GND" H 7005 4827 50  0000 C CNN
-F 2 "" H 7000 5000 50  0001 C CNN
-F 3 "" H 7000 5000 50  0001 C CNN
-	1    7000 5000
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:GND #PWR0117
 U 1 1 5C153E6B
 P 8425 5450
@@ -1213,17 +1080,6 @@ F 3 "" H 7375 650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+5V #PWR0124
-U 1 1 5C1557EA
-P 7550 4550
-F 0 "#PWR0124" H 7550 4400 50  0001 C CNN
-F 1 "+5V" H 7565 4723 50  0000 C CNN
-F 2 "" H 7550 4550 50  0001 C CNN
-F 3 "" H 7550 4550 50  0001 C CNN
-	1    7550 4550
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:+5V #PWR0125
 U 1 1 5C1563B7
 P 2375 1825
@@ -1243,17 +1099,6 @@ F 1 "+5V" H 765 1948 50  0000 C CNN
 F 2 "" H 750 1775 50  0001 C CNN
 F 3 "" H 750 1775 50  0001 C CNN
 	1    750  1775
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0128
-U 1 1 5C178873
-P 5575 4850
-F 0 "#PWR0128" H 5575 4600 50  0001 C CNN
-F 1 "GND" H 5580 4677 50  0000 C CNN
-F 2 "" H 5575 4850 50  0001 C CNN
-F 3 "" H 5575 4850 50  0001 C CNN
-	1    5575 4850
 	1    0    0    -1  
 $EndComp
 Text Label 975  3825 2    50   ~ 0
@@ -1328,17 +1173,6 @@ F 1 "LM324" H 6225 3701 50  0000 C CNN
 F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 6175 3525 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 6275 3625 50  0001 C CNN
 	3    6225 3425
-	1    0    0    -1  
-$EndComp
-$Comp
-L Amplifier_Operational:LM324 U3
-U 4 1 5C09B24E
-P 8000 4750
-F 0 "U3" H 8000 5117 50  0000 C CNN
-F 1 "LM324" H 8000 5026 50  0000 C CNN
-F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 7950 4850 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 8050 4950 50  0001 C CNN
-	4    8000 4750
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1456,17 +1290,6 @@ F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 3625 3575 50  0001 C CNN
 	3    3575 3375
 	1    0    0    1   
 $EndComp
-$Comp
-L Amplifier_Operational:LM324 U1
-U 4 1 5C3FCD1E
-P 6225 4650
-F 0 "U1" H 6225 5017 50  0000 C CNN
-F 1 "LM324" H 6225 4926 50  0000 C CNN
-F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 6175 4750 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 6275 4850 50  0001 C CNN
-	4    6225 4650
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	1875 3925 1875 3375
 Wire Wire Line
@@ -1560,17 +1383,6 @@ F 1 "1N4148" H 6725 3300 50  0000 C CNN
 F 2 "Diode_SMD:D_SOD-123" H 6725 3250 50  0001 C CNN
 F 3 "http://www.nxp.com/documents/data_sheet/1N4148_1N4448.pdf" H 6725 3425 50  0001 C CNN
 	1    6725 3425
-	-1   0    0    1   
-$EndComp
-$Comp
-L Diode:1N4148 D1
-U 1 1 5C02A0A8
-P 6825 4650
-F 0 "D1" H 6825 4434 50  0000 C CNN
-F 1 "1N4148" H 6825 4525 50  0000 C CNN
-F 2 "Diode_SMD:D_SOD-123" H 6825 4475 50  0001 C CNN
-F 3 "http://www.nxp.com/documents/data_sheet/1N4148_1N4448.pdf" H 6825 4650 50  0001 C CNN
-	1    6825 4650
 	-1   0    0    1   
 $EndComp
 $Comp
@@ -1689,43 +1501,6 @@ F 3 "" H 1125 7350 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	1625 7125 1625 7325
-$Comp
-L Device:R_Small R19
-U 1 1 5C3F66FF
-P 5250 4400
-F 0 "R19" H 5325 4425 50  0000 L CNN
-F 1 "100K" H 5325 4350 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" H 5250 4400 50  0001 C CNN
-F 3 "~" H 5250 4400 50  0001 C CNN
-	1    5250 4400
-	-1   0    0    1   
-$EndComp
-$Comp
-L Device:R_Small R20
-U 1 1 5C3F6822
-P 5250 4700
-F 0 "R20" H 5325 4725 50  0000 L CNN
-F 1 "100K" H 5325 4650 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" H 5250 4700 50  0001 C CNN
-F 3 "~" H 5250 4700 50  0001 C CNN
-	1    5250 4700
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	5250 4600 5250 4550
-Wire Wire Line
-	5250 4550 5275 4550
-Wire Wire Line
-	5250 4800 5250 4825
-Wire Wire Line
-	5250 4825 5575 4825
-Connection ~ 5575 4825
-Wire Wire Line
-	5575 4825 5575 4800
-Wire Wire Line
-	5200 4250 5250 4250
-Text Notes 3325 4975 0    50   ~ 0
-R19/20 define attenuation for peak level calibration
 $Comp
 L Connector:AudioJack4 J1
 U 1 1 5C4A06F4
@@ -1874,11 +1649,6 @@ Wire Wire Line
 Connection ~ 5000 3325
 Wire Wire Line
 	5000 3050 5000 3100
-Wire Wire Line
-	5250 4500 5250 4550
-Connection ~ 5250 4550
-Wire Wire Line
-	5250 4250 5250 4300
 $Comp
 L audio-controlled-neopixel:custom_TMAxxxxD U2
 U 1 1 5C4B4FE3
@@ -1897,4 +1667,84 @@ F 10 "https://www.mouser.com/Search/Refine.aspx?Keyword=495-TMA-2412D" H 4300 12
 	1    2950 2075
 	1    0    0    -1  
 $EndComp
+Text Label 8425 4750 0    50   ~ 0
+Clipping
+Wire Wire Line
+	8425 5000 8425 5200
+Text Label 9650 1675 2    50   ~ 0
+Clipping
+Wire Wire Line
+	9650 1675 9675 1675
+$Comp
+L Amplifier_Operational:LM324 U3
+U 4 1 5C5F32F4
+P 3225 5000
+F 0 "U3" H 3225 5367 50  0000 C CNN
+F 1 "LM324" H 3225 5276 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 3175 5100 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 3275 5200 50  0001 C CNN
+	4    3225 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:LM324 U1
+U 4 1 5C5F3398
+P 2175 5050
+F 0 "U1" H 2175 5417 50  0000 C CNN
+F 1 "LM324" H 2175 5326 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 2125 5150 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 2225 5250 50  0001 C CNN
+	4    2175 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0116
+U 1 1 5C5F39BE
+P 1675 5025
+F 0 "#PWR0116" H 1675 4775 50  0001 C CNN
+F 1 "GND" H 1680 4852 50  0000 C CNN
+F 2 "" H 1675 5025 50  0001 C CNN
+F 3 "" H 1675 5025 50  0001 C CNN
+	1    1675 5025
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1875 5150 1825 5150
+Wire Wire Line
+	1825 5150 1825 5350
+Wire Wire Line
+	1825 5350 2500 5350
+Wire Wire Line
+	2500 5350 2500 5050
+Wire Wire Line
+	2500 5050 2475 5050
+Wire Wire Line
+	2925 5100 2850 5100
+Wire Wire Line
+	2850 5100 2850 5325
+Wire Wire Line
+	2850 5325 3600 5325
+Wire Wire Line
+	3600 5325 3600 5000
+Wire Wire Line
+	3600 5000 3525 5000
+$Comp
+L power:GND #PWR0124
+U 1 1 5C6519C7
+P 2725 4975
+F 0 "#PWR0124" H 2725 4725 50  0001 C CNN
+F 1 "GND" H 2730 4802 50  0000 C CNN
+F 2 "" H 2725 4975 50  0001 C CNN
+F 3 "" H 2725 4975 50  0001 C CNN
+	1    2725 4975
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2925 4900 2725 4900
+Wire Wire Line
+	2725 4900 2725 4975
+Wire Wire Line
+	1875 4950 1675 4950
+Wire Wire Line
+	1675 4950 1675 5025
 $EndSCHEMATC
