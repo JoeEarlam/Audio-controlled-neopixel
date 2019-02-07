@@ -1,4 +1,4 @@
-(kicad_pcb (version 20171130) (host pcbnew 5.0.2-bee76a0~70~ubuntu16.04.1)
+(kicad_pcb (version 20171130) (host pcbnew 5.0.2-bee76a0~70~ubuntu18.04.1)
 
   (general
     (thickness 1.6)
@@ -3118,8 +3118,8 @@
     )
   )
 
-  (gr_text "Audio Controlled\nNeopixel Driver\nDesigned by Joe Earlam\nRev: p2" (at 81.28 77.724) (layer F.SilkS) (tstamp 5C5B510C)
-    (effects (font (size 1.4 1.4) (thickness 0.3)) (justify left))
+  (gr_text "Audio Controlled\nNeopixel Driver\nDesigned by Joe Earlam\nRev: p2" (at 72.517 76.581) (layer F.SilkS) (tstamp 5C5B510C)
+    (effects (font (size 1 1) (thickness 0.2)) (justify left))
   )
   (gr_text VIN (at 105.918 81.28) (layer F.SilkS) (tstamp 5C3A2E64)
     (effects (font (size 1 1) (thickness 0.2)))
