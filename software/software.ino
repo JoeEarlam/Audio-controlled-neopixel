@@ -7,8 +7,9 @@
 /////////////////////////Number of pixels in your strip
 const byte numpixels = 152; 
 
-const byte pin = 2;           //Neopixel pin
+const byte clipping = 2;
 const byte button = 3;        //button pin
+const byte pin = 6;           //Neopixel pin
 
 boolean buttonState;          //current state of button
 boolean lastButtonState;      //previous state of button
@@ -69,9 +70,16 @@ void loop()
   //Saves current RGB values to memory for use by routines
   red = pgm_read_byte(&gamma8[analogRead(0)/4]);    //Red is A0/4 (0-255 output, 0-1023 input)
   green = pgm_read_byte(&gamma8[analogRead(1)/4]);   //Green is A1/4
-  blue = analogRead(2)/3;
-  if(blue > 255) blue = 255;                        //blue is less sensitive so we do some dirty compression on it
-  blue = pgm_read_byte(&gamma8[blue]);
+  blue = pgm_read_byte(&gamma8[analogRead(2)/4]);   //Green is A1/4
+
+  if((red || green || blue) > 250)
+  {
+    digitalWrite(clipping,HIGH);
+  }
+  else
+  {
+    digitalWrite(clipping,LOW);
+  }
 
   if(programme == 0) //dimming chasing lights
     {
