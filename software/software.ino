@@ -44,6 +44,7 @@ const uint8_t PROGMEM gamma8[] = {
   215,218,220,223,225,228,231,233,236,239,241,244,247,249,252,255 };
 
 void setup() {
+  Serial.begin(9600);
   pinMode(button,INPUT);
   pixels.begin(); // This initializes the NeoPixel library.
 }
@@ -72,6 +73,11 @@ void loop()
   green = pgm_read_byte(&gamma8[analogRead(1)/4]);   //Green is A1/4
   blue = pgm_read_byte(&gamma8[analogRead(2)/4]);   //Green is A1/4
 
+//  Serial.println(red);
+//  Serial.println(green);
+//  Serial.println(blue);
+//  Serial.println(" ");
+  
   if((red || green || blue) > 250)
   {
     digitalWrite(clipping,HIGH);
