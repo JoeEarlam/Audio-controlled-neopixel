@@ -44,8 +44,9 @@ const uint8_t PROGMEM gamma8[] = {
   215,218,220,223,225,228,231,233,236,239,241,244,247,249,252,255 };
 
 void setup() {
-  Serial.begin(9600);
   pinMode(button,INPUT);
+  pinMode(clipping,OUTPUT);
+  Serial.begin(9600);
   pixels.begin(); // This initializes the NeoPixel library.
 }
 
@@ -68,17 +69,11 @@ void loop()
   }
   lastButtonState = buttonState;
 
-  //Saves current RGB values to memory for use by routines
-  red = pgm_read_byte(&gamma8[analogRead(0)/4]);    //Red is A0/4 (0-255 output, 0-1023 input)
-  green = pgm_read_byte(&gamma8[analogRead(1)/4]);   //Green is A1/4
-  blue = pgm_read_byte(&gamma8[analogRead(2)/4]);   //Green is A1/4
-
-//  Serial.println(red);
-//  Serial.println(green);
-//  Serial.println(blue);
-//  Serial.println(" ");
+  int rawRed = analogRead(0);
+  int rawGreen = analogRead(1);
+  int rawBlue = analogRead(2);
   
-  if((red || green || blue) > 250)
+  if((rawRed == 1023 || rawGreen == 1023 || rawBlue == 1023))
   {
     digitalWrite(clipping,HIGH);
   }
@@ -86,6 +81,11 @@ void loop()
   {
     digitalWrite(clipping,LOW);
   }
+  
+  //Saves current RGB values to memory for use by routines
+  red = pgm_read_byte(&gamma8[rawRed/4]);    //Red is A0/4 (0-255 output, 0-1023 input)
+  green = pgm_read_byte(&gamma8[rawGreen/4]);   //Green is A1/4
+  blue = pgm_read_byte(&gamma8[rawBlue/4]);   //Blue is A2/4
 
   if(programme == 0) //dimming chasing lights
     {
