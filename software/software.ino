@@ -57,7 +57,7 @@ void loop()
   buttonState = digitalRead(button);
   if (buttonState != lastButtonState) 
   {
-    if (buttonState == HIGH) 
+    if (buttonState == HIGH)
     {
       programme++;
       if(programme > 4) //Set highest programme number here
