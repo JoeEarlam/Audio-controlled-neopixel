@@ -34,7 +34,7 @@
   )
 
   (setup
-    (last_trace_width 0.5)
+    (last_trace_width 0.25)
     (user_trace_width 0.5)
     (user_trace_width 1)
     (user_trace_width 2)
@@ -90,7 +90,7 @@
       (mirror false)
       (drillshape 0)
       (scaleselection 1)
-      (outputdirectory "/home/joe/exported/neopixel/"))
+      (outputdirectory "../../gerbers/neopixel/"))
   )
 
   (net 0 "")
@@ -3562,7 +3562,7 @@
   (segment (start 119.634 33.147) (end 119.634 31.369) (width 0.5) (layer B.Cu) (net 67))
   (segment (start 115.824 36.957) (end 119.634 33.147) (width 0.5) (layer B.Cu) (net 67))
 
-  (zone (net 1) (net_name GND) (layer F.Cu) (tstamp 5D18EDC3) (hatch edge 0.508)
+  (zone (net 1) (net_name GND) (layer F.Cu) (tstamp 5D3AF366) (hatch edge 0.508)
     (connect_pads (clearance 0.508))
     (min_thickness 0.254)
     (fill yes (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
@@ -4659,7 +4659,7 @@
       )
     )
   )
-  (zone (net 1) (net_name GND) (layer B.Cu) (tstamp 5D18EDC0) (hatch edge 0.508)
+  (zone (net 1) (net_name GND) (layer B.Cu) (tstamp 5D3AF363) (hatch edge 0.508)
     (connect_pads (clearance 0.508))
     (min_thickness 0.254)
     (fill yes (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))

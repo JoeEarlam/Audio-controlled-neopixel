@@ -1447,28 +1447,11 @@ Wire Wire Line
 Connection ~ 1200 3950
 Wire Wire Line
 	1200 3950 1825 3950
-$Comp
-L Device:R_POT RV1
-U 1 1 5CE7C433
-P 2825 3325
-F 0 "RV1" H 2755 3279 50  0000 R CNN
-F 1 "R_POT" H 2755 3370 50  0000 R CNN
-F 2 "Potentiometer_THT:Potentiometer_Alps_RK097_Single_Horizontal" H 2825 3325 50  0001 C CNN
-F 3 "~" H 2825 3325 50  0001 C CNN
-	1    2825 3325
-	1    0    0    1   
-$EndComp
 Connection ~ 1825 3950
 Wire Wire Line
 	1825 3550 1825 3950
 Wire Wire Line
-	3325 3325 2975 3325
-Wire Wire Line
-	2825 3150 2825 3175
-Wire Wire Line
 	1825 3950 2825 3950
-Wire Wire Line
-	2825 3950 2825 3475
 Wire Wire Line
 	4225 3425 3950 3425
 Connection ~ 3950 3425
@@ -1815,4 +1798,21 @@ Wire Wire Line
 	7950 875  8125 875 
 Wire Wire Line
 	7950 1125 7950 1100
+Wire Wire Line
+	2825 3150 2825 3175
+Wire Wire Line
+	3325 3325 2975 3325
+Wire Wire Line
+	2825 3950 2825 3475
+$Comp
+L Device:R_POT RV1
+U 1 1 5CE7C433
+P 2825 3325
+F 0 "RV1" H 2755 3279 50  0000 R CNN
+F 1 "R_POT" H 2755 3370 50  0000 R CNN
+F 2 "Potentiometer_THT:Potentiometer_Alps_RK097_Single_Horizontal" H 2825 3325 50  0001 C CNN
+F 3 "~" H 2825 3325 50  0001 C CNN
+	1    2825 3325
+	1    0    0    1   
+$EndComp
 $EndSCHEMATC
